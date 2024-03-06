@@ -8,7 +8,7 @@ public class CurrentConditionalDisplay implements Observer, DisplayElement {
         weatherData.registerObserver(this);
     }
 
-    public void update() {
+    public void update() /*// update(float temperature, float humidity, float pressure)*/{
         this.temperature = weatherData.getTemperature();
         this.humidity = weatherData.getHumidity();
         display();
